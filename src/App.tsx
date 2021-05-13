@@ -1,15 +1,23 @@
 import React from 'react';
-
+import {ToDoListItem} from "./toDoListItem"
 function App() {
+  const todo : toDo[] =[
+    {
+        text : "TypeScript Chutiya Hai",
+        complete : true
+},
+    {
+        text : "REACT IS BEST",
+        complete : true
+    }
+];
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-         hello world!
-        </p>
-       
-      </header>
-    </div>
+    <>
+    <ul>
+      <ToDoListItem todo ={todo[0]}/>\
+      <ToDoListItem todo = {todo[1]}/>
+    </ul>
+    </>
   );
 }
 
